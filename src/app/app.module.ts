@@ -4,9 +4,10 @@ import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { CustomerComponent } from "./customers/customer.component";
+import { SmInputComponent } from './shared/sm-input/sm-input.component';
 
 @NgModule({
-  declarations: [AppComponent, CustomerComponent],
+  declarations: [AppComponent, CustomerComponent, SmInputComponent],
   imports: [
     BrowserModule,
     // FormsModule

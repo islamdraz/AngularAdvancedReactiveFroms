@@ -62,6 +62,10 @@ export class CustomerComponent implements OnInit {
     this.customerForm = this.fb.group({
       firstName: ["", [Validators.required, Validators.minLength(3)]],
       lastName: ["", [Validators.required, Validators.maxLength(50)]],
+      middleName: [
+        "this init value",
+        [Validators.required, Validators.minLength(3)],
+      ],
       emailGroup: this.fb.group(
         {
           email: ["", [Validators.required, Validators.email]],
@@ -112,5 +116,9 @@ export class CustomerComponent implements OnInit {
   save() {
     console.log(this.customerForm);
     console.log("Saved: " + JSON.stringify(this.customerForm.value));
+  }
+
+  onMiddleNameInput(controle: AbstractControl) {
+    console.log(controle);
   }
 }

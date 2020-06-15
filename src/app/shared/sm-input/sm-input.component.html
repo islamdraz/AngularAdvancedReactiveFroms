@@ -1,0 +1,8 @@
+    <div [formGroup]="parentForm">
+      <input class="form-control" type="type" [id]="controlName" [placeholder]="placeholder"
+        [formControlName]="controlName" [ngClass]="{
+              'is-invalid': errorMessage }" />
+      <span class="invalid-feedback">
+        {{errorMessage}}
+      </span>
+    </div>
